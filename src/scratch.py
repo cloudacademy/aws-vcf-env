@@ -8,7 +8,7 @@ import botocore
 import traceback
 import time
 
-def handler(event=None, context=None):
+def handler(event, context):
     session = create_new_session(event)
     client = session.client('ssm')
     ec2_client = session.client('ec2')
@@ -79,7 +79,7 @@ def handler(event=None, context=None):
 def timed_handler():
     start = time.time()
 
-    result = handler()
+    result = handler(None, None)
 
     end = time.time()
     print(end - start)
