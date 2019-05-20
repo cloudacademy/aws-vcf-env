@@ -22,4 +22,4 @@ Envrionment for working with AWS VCFs
 
 ## References
 
-- Boto3 (AWS Python SDK) Reference https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/index.html
+- [Boto3 (AWS Python SDK) Reference](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/index.html)
