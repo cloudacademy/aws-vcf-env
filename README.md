@@ -8,7 +8,7 @@ Envrionment for working with AWS VCFs
 
 1. Create an AWS user for running the VCFs and attach the admin or readonly role.
 
-1. In `.vscode/launch.json` fill in the `AWS_CLIENT_ID` and `AWS_CLIENT_SECRET` for the VCF user:
+1. In `.vscode/launch.json` fill in the `AWS_CLIENT_ID` and `AWS_CLIENT_SECRET` for the VCF user.
 
 1. Run `init.ps1` to set up the environment
 
@@ -19,3 +19,7 @@ Envrionment for working with AWS VCFs
     ```
 
 1. Develop and debug functions using the `Current File (Integrated Terminal)` configuration (press F5 with the file open)
+
+## References
+
+- Boto3 (AWS Python SDK) Reference https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/index.html
