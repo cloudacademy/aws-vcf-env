@@ -1,13 +1,12 @@
 import json
 
+from config import CONFIG
+from credentials import credential_helper
+
 import boto3
 import botocore
 import traceback
 import time
-
-from config import CONFIG
-from credentials import credential_helper
-
 
 def handler(event=None, context=None):
     session = create_new_session(event)
