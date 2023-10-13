@@ -8,7 +8,7 @@ Envrionment for working with AWS VCFs
 
 1. Create an AWS user for running the VCFs and attach the admin or readonly role.
 
-1. In `.vscode/launch.json` fill in the `AWS_CLIENT_ID` and `AWS_CLIENT_SECRET` for the VCF user.
+1. In `.vscode/launch.json` fill in the `AWS_CLIENT_ID` and `AWS_CLIENT_SECRET` for the VCF user. Or if you have the AWS CLI installed, run `aws configure` and leave the `AWS_CLIENT_ID` and `AWS_CLIENT_SECRET` variables as empty strings. Boto3 will find your default credentials automatically.
 
 1. In `init.sh` (Mac/Linux)/`init.ps1` (Windows) replace YOUR_BITBUCKET_USER with the name of your Cloud Academy BitBucket user
 

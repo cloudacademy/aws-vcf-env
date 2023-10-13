@@ -11,11 +11,24 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "env": {
-                // VCF account
-                "AWS_CLIENT_ID"     : "INSERT_CLIENT_ID",
-                "AWS_CLIENT_SECRET" : "INSERT_CLIENT_SECRET",
-                "AWS_REGION"        : "us-west-2"
-                
+                "AWS_CLIENT_ID": "",
+                "AWS_CLIENT_SECRET": "",
+                "AWS_REGION": "us-west-2"
+            }
+        },
+        {
+            "name": "Docker: Python - General",
+            "type": "docker",
+            "request": "launch",
+            "preLaunchTask": "docker-run: debug",
+            "python": {
+                "pathMappings": [
+                    {
+                        "localRoot": "${workspaceFolder}",
+                        "remoteRoot": "/app"
+                    }
+                ],
+                "projectType": "general"
             }
         }
     ]
