@@ -2,7 +2,6 @@ import json
 import time
 
 from config import CONFIG
-from credentials import credential_helper
 
 import boto3
 import botocore
@@ -83,10 +82,10 @@ def create_new_session(event):
       	region_name=event['region_id']
     )
 
-def timed_handler():
+def timed_handler(event, context):
     start = time.time()
 
-    handler({}, None)
+    result = handler(event, context)
 
     end = time.time()
     print(end - start)
@@ -94,10 +93,6 @@ def timed_handler():
     return result
 
 
-def create_new_session(event):
-    return credential_helper.create_new_session()
-
-
 if __name__ == '__main__':
-    result = timed_handler()
+    result = timed_handler(CONFIG, None)
     print(result)
